@@ -1,0 +1,24 @@
+.photo-container {
+    position: absolute;
+    z-index: 0;
+    right: -10%;
+    bottom: 0;
+    left: auto;
+    width: 270px;
+    height: 320px;
+    opacity: 0;
+
+    .photo-img {
+        position: absolute;
+        top: -75px;
+        left: 70px;
+        width: 100%;
+        border-radius: 25px;
+        border: 3px solid #ffd700;
+    }
+}
+
+.svg-container {
+    stroke: #ffd700;
+    stroke-width: 4px;
+}

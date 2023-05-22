@@ -1,0 +1,81 @@
+$animationName: goOpaque;
+
+.container {
+    width: 100%;
+    will-change: contents;
+    height: 90%;
+    min-height: 566px;
+    position: absolute;
+    // opacity: 0;
+    top: 5%;
+    margin: 0 auto;
+    z-index: 1;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
+.about-page {
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 35%;
+        vertical-align: middle;
+        display: table-cell;
+        max-height: 90%;
+
+        h1 {
+            font-size: 104px;
+            font-family: 'Coolvetica';
+            color: #ffd700;
+            font-weight: 400;
+        }
+    }
+}
+
+.stage-cube-cont {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    padding-top: 15%;
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+
+
+    @for $i from 1 through 25 {
+        div:nth-child(#{$i}) {
+            // transition: all 0.5s ease-in;
+            animation: #{$animationName} 5s;
+            animation-delay: #{$i * 5}s;
+        }
+    }
+
+
+    div {
+        opacity: 0;
+
+        svg {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    @keyframes #{$animationName} {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+        // 100% {
+        //     opacity: 0;
+        // }
+    }
+
+}
